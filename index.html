@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Frontend Mentor - Fylo data storage component">
+    <meta name="keywords" content="Fylo data storage component, Frontend Mentor">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <title>Fylo data storage component</title>
+</head>
+
+<body>
+    <main>
+
+        <!--Fylo Container -->
+        <section class="fylo-container">
+            <img class="logo" src="images/logo.svg" alt="Fylo logo" />
+            <section class="icons">
+                <div class="icon-img">
+                    <label for="file-input" class="icon-box">
+                        <i class="fa fa-cloud-upload fa-2x" style="color: #697ed4;"></i>
+                        <input type="file" id="file-input" style="display: none;">
+                        <span style="color: white;" class="upload-file-txt"> Upload File</span>
+                    </label>
+                </div>
+            </section>
+        </section>
+        <!-- Storage Container -->
+        <section class="storage-container">
+            <h1>You've used <span id="storage-used">0</span>MB of your storage</h1>
+            <!-- Progress Bar -->
+            <section class="progress-bar">
+                <div class="gradient-bar">
+                    <div class="dot-container">
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </section>
+            <h2>
+                <span id="storage-used2">0 MB</span>
+                <span>100 MB</span>
+            </h2>
+            <!-- GB left -->
+            <section class="gb-left">
+                <p id="storage-left">100 <span>MB left</span></p>
+            </section>
+        </section>
+
+        <!--Images Container -->
+        <div id="uploaded-image-box">
+        </div>
+    </main>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2></h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>File format isn't supported.</p>
+                <p>Allowed image formats: .jpg, .jpeg, .gif, .png</p>
+                <button id="understandBtn">Understand</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModal2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2></h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>There is not enough space on the disk!</p>
+                <p>Max space: 100MB</p>
+                <button id="understandBtn2">Understand</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
